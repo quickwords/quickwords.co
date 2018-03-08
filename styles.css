@@ -34,6 +34,10 @@ body {
     text-align: center;
 }
 
+.header .info i {
+    text-decoration: underline;
+}
+
 .logo {
     display: flex;
     justify-content: center;
