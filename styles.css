@@ -105,6 +105,8 @@ body {
     color: #46abe5;
     font-weight: 700;
     cursor: pointer;
+    height: 48px;
+
 }
 .buttons a:nth-child(2){
     margin: 0 20px;
