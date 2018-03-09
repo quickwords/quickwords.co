@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-/*     outline: 1px solid red; */
 }
 
 a {
@@ -315,10 +314,6 @@ h1 {
         width: 100%;
         margin-top: 2rem;
         font-size: 1.5rem;
-    }
-
-    .logo {
-        margin-top: 5rem;
     }
 
     .version {
