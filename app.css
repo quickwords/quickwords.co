@@ -87,6 +87,7 @@ body {
     margin-top: 1rem;
     color: #333;
     font-style: italic;
+    height: 1.2rem;
 }
 
 .buttons {
@@ -204,9 +205,8 @@ h1 {
     margin-top: 1rem;
 }
 
-.os__logo > svg {
+.os__logo > img {
     height: 5rem;
-    color: #859ba8;
 }
 
 .os__button {
@@ -233,4 +233,42 @@ h1 {
 .os__info {
     margin-top: .5rem;
     font-size: 0.8rem;
+}
+
+.typed-text {
+    color: #46abe4;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    height: 2.3rem;
+}
+
+.typed-text:after {
+    width: 2px;
+    height: 2.3rem;
+    content: "";
+    background: #46abe4;
+    display: block;
+    top: 0;
+    right: -.3rem;
+    position: absolute;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        opacity: 0;
+    }
+}
+
+.animation-box {
+    height: 4rem;
+    margin: 2rem auto 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation {
+    width: 25.85rem;
 }
