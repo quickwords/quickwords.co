@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+/*     outline: 1px solid red; */
 }
 
 a {
@@ -32,7 +33,6 @@ body {
 
 .header .info span {
     text-align: center;
-
 }
 
 .header .info i {
@@ -45,7 +45,8 @@ body {
 }
 
 .logo img {
-    height: 4rem;
+    max-width: 20rem;
+    width: 100%;
 }
 
 .body {
@@ -55,6 +56,7 @@ body {
 .platforms {
     display: flex;
 }
+
 .platform {
     display: flex;
     flex-direction: column;
@@ -107,9 +109,9 @@ body {
     font-weight: 700;
     cursor: pointer;
     height: 48px;
-
 }
-.buttons a:nth-child(2){
+
+.buttons a:nth-child(2) {
     margin: 0 20px;
 }
 
@@ -122,11 +124,12 @@ body {
     color: #fff;
 }
 
-.buttons a.github-link{
+.buttons a.github-link {
     padding: 0px;
     border: none;
     fill: #46abe4;
 }
+
 .footer {
     display: flex;
     justify-content: center;
@@ -272,3 +275,45 @@ h1 {
 .animation {
     width: 25.85rem;
 }
+
+@media (max-width: 780px) {
+    .oss {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 560px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons a,
+    .buttons a:nth-child(2) {
+        text-align: center;
+        margin: .5rem 0;
+    }
+
+    .authors {
+        flex-direction: column;
+    }
+
+    .author {
+        margin: .5rem 0;
+    }
+
+    .animation-box {
+        display: none;
+    }
+
+    h1 {
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+
+    .header .info {
+        width: 100%;
+    }
+
+    .logo img {
+        /* width: 100%; */
+    
