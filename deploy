@@ -1,6 +1,10 @@
 #!/bin/bash
 
 npm run production \
+&& cd docs \
+&& vuepress build . \
+&& cd .. \
+&& cp -R docs/.vuepress/dist dist/docs \
 && cd dist \
 && git add --all \
 && git commit -m "Build" \

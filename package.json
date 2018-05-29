@@ -28,6 +28,7 @@
     "laravel-mix": "^2.0.0",
     "node-sass": "^4.8.1",
     "purgecss-webpack-plugin": "^0.20.1",
-    "tailwindcss": "^0.4.3"
+    "tailwindcss": "^0.4.3",
+    "vuepress": "^0.10.0"
   }
 }
