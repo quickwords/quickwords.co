@@ -3,7 +3,7 @@ module.exports = {
     description: 'Quickwords is an open-source alternative to Text Expander written in Electron.',
     base: '/docs/',
     head: [
-        ['link', { rel: 'icon', href: '/assets/favicon.png' }],
+        ['link', { rel: 'icon', href: 'https://quickwords.co/assets/favicon.png' }],
     ],
     themeConfig: {
         repo: 'quickwords/quickwords',
