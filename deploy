@@ -5,7 +5,7 @@ npm run production \
 && vuepress build . \
 && cd .. \
 && rm -rf dist/docs \
-&& mv docs/.vuepress/dist dist/docs \
+&& cp -R docs/.vuepress/dist dist/docs \
 && cd dist \
 && git add --all \
 && git commit -m "Build" \
