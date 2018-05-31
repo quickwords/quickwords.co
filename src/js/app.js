@@ -35,8 +35,8 @@ function main() {
     fetch('https://api.github.com/repos/quickwords/quickwords/releases/latest')
         .then(response => response.json())
         .then(data => {
-            document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.zip`
-            document.querySelector('#mac').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.zip`
+            document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
+            document.querySelector('#mac').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
             document.querySelector('#version').innerHTML = data.tag_name
 
             // @todo Uncomment
