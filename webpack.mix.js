@@ -30,8 +30,10 @@ if (! mix.config.production) {
         files: [
             'src/*.html',
             'src/*.js',
-            'dist/css/app.css'
-        ]
+            'src/*.sass',
+            'dist/css/app.css',
+            'tailwind.js'
+        ],
     })
 }
 
