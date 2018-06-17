@@ -13,7 +13,6 @@ class TailwindExtractor {
     }
 }
 
-// .setPublicPath('./dist')
 mix
     .js('src/js/app.js', 'dist/js/app.js')
     .sass('src/sass/app.sass', 'dist/css/app.css')
@@ -36,10 +35,6 @@ if (! mix.config.production) {
         ],
     })
 }
-
-// if (mix.config.production) {
-//     mix.version()
-// }
 
 // Only run PurgeCSS during production builds for faster development builds
 // and so you still have the full set of utilities available during
