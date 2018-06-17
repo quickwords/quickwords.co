@@ -7,6 +7,7 @@ module.exports = {
     ],
     themeConfig: {
         repo: 'quickwords/quickwords',
+        docsRepo: 'quickwords/quickwords.co',
         editLinks: true,
         docsDir: 'docs',
         editLinkText: 'Edit this page on GitHub',
