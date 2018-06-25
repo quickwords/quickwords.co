@@ -44,7 +44,7 @@ function qw(trigger) {
         resolve(10) // valid
         resolve({ a: 'a' }) // invalid - objects are not supported. Use JSON.stringify explicitly
         resolve([1, 2, 3]) // invalid - arrays are not supported. Use JSON.stringify explicitly
-        resolve() // invalid - promise must reosolve with a string or a number
+        resolve() // invalid - promise must resolve with a string or a number
         setTimeout(() => resolve('value'), 5001) // invalid - takes longer than 5 seconds
     })
 }
@@ -54,7 +54,7 @@ A promise-based function must be resolved within 5 seconds. Otherwise it will fa
 :::
 
 ### async/await (experimental)
-Since async/await is a syntactic sugar over Promises, and is now supported in Node, Quickwords also supports it. One limitation you may encounter, is that the built-in editor may show some warnings. They appear, because JSHint, which is used in the background, doesn't support ES7 yet. These warnings may be ingored though, as they are not relevant. This is a **valid** javascript code for Quickwords:
+Since async/await is a syntactic sugar over Promises, and is now supported in Node, Quickwords also supports it. One limitation you may encounter, is that the built-in editor may show some warnings. They appear, because JSHint, which is used in the background, doesn't support ES7 yet. These warnings may be ignored though, as they are not relevant. This is a **valid** javascript code for Quickwords:
 ```js
 async function qw(trigger) {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
