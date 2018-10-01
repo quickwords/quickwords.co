@@ -13,7 +13,9 @@ A useful example of using regex is to specify a format of something you want to 
 
 [Full regex documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-**Warning: If you choose to use a regular expression, make sure your trigger is not longer than the chosen _Stored Characters_ value.**
+::: warning
+If you choose to use a regular expression, make sure your trigger is not longer than the chosen _Stored Characters_ value.
+:::
 
 ## Writing Javascript-powered snippets *
 Quickwords supports JavaScript scripts as things to be executed, when a trigger is matched.
