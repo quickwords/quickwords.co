@@ -15,7 +15,7 @@ A useful example of using regex is to specify a format of something you want to 
 
 **Warning: If you choose to use a regular expression, make sure your trigger is not longer than the chosen _Stored Characters_ value.**
 
-## Writing Javascript-powered snippet *
+## Writing Javascript-powered snippets *
 Quickwords supports JavaScript scripts as things to be executed, when a trigger is matched.
 All scripts must be in given format:
 ```js
