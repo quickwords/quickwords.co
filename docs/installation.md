@@ -16,6 +16,8 @@ P.S. If you want to help us get rid of this problem and/or would like Quickwords
 Linux and Windows versions of the app are coming soon. In the meantime all PRs are very welcome.
 
 ## Manual build *
+Required Node version v8.3.0.
+
 ```bash
 git clone https://github.com/quickwords/quickwords.git
 cd quickwords
