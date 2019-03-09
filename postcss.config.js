@@ -10,18 +10,18 @@ module.exports = {
       preset: 'default',
     }),
     purgecss({
-        content: ['./src/index.html'],
-        extractors: [
-          {
-            extractor: class {
-              static extract(content) {
-                return content.match(/[a-zA-Z0-9-:_/]+/g) || [];
-              }
-            },
-            extensions: ['html'],
+      content: ['./src/index.html'],
+      extractors: [
+        {
+          extractor: class {
+            static extract(content) {
+              return content.match(/[a-zA-Z0-9-:_/]+/g) || [];
+            }
           },
-        ],
-      }),
+          extensions: ['html'],
+        },
+      ],
+    }),
     autoprefixer,
   ],
 }
