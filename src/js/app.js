@@ -28,21 +28,20 @@ function play() {
     setTimeout(() => box.innerHTML += 'Open up new possibilities', i += 10)
 }
 
-function main() {
+async function main() {
     document.querySelector('#os').innerHTML = `Download for Mac`
     // document.querySelector('#os').innerHTML = `Download for ${getPlatform()}` // @todo Uncomment
 
-    fetch('https://api.github.com/repos/quickwords/quickwords/releases/latest')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
-            document.querySelector('#mac').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
-            document.querySelector('#version').innerHTML = data.tag_name
+    const response = await fetch('https://api.github.com/repos/quickwords/quickwords/releases/latest')
+    const data = await response.json()
 
-            // @todo Uncomment
-            // document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-${getPlatform()}.zip`
-            // document.querySelector('#version').innerHTML = data.tag_name
-        })
+    document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
+    document.querySelector('#mac').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
+    document.querySelector('#version').innerHTML = data.tag_name
+
+    // @todo Uncomment
+    // document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-${getPlatform()}.zip`
+    // document.querySelector('#version').innerHTML = data.tag_name
 
     setTimeout(play, 1000)
     setInterval(play, 8000)
