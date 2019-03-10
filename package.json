@@ -4,11 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "deploy": "./deploy"
+    "dev": "parcel src/index.html",
+    "assets:build": "parcel build src/index.html",
+    "docs:build": "vuepress build docs -d dist/docs",
+    "build": "yarn assets:build && yarn docs:build"
   },
   "repository": {
     "type": "git",
@@ -21,14 +20,11 @@
   },
   "homepage": "https://github.com/quickwords/quickwords.co#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "browser-sync-webpack-plugin": "^2.0.1",
-    "cross-env": "^5.1.4",
-    "glob-all": "^3.1.0",
-    "laravel-mix": "^2.0.0",
-    "node-sass": "^4.8.1",
-    "purgecss-webpack-plugin": "^0.20.1",
-    "tailwindcss": "^0.4.3",
-    "vuepress": "^0.10.0"
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "autoprefixer": "^9.4.10",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.0",
+    "tailwindcss": "^0.7.4",
+    "vuepress": "^0.14.10"
   }
 }
