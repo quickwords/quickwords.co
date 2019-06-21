@@ -7,7 +7,8 @@
     "dev": "parcel src/index.html",
     "assets:build": "parcel build src/index.html",
     "docs:build": "vuepress build docs -d dist/docs",
-    "build": "yarn assets:build && yarn docs:build"
+    "cp:static": "mkdir dist/assets; cp src/assets/logo.svg dist/assets/logo.svg",
+    "build": "yarn assets:build && yarn docs:build && yarn cp:static"
   },
   "repository": {
     "type": "git",
