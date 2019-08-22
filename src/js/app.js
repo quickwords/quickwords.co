@@ -35,9 +35,13 @@ async function main() {
     const response = await fetch('https://api.github.com/repos/quickwords/quickwords/releases/latest')
     const data = await response.json()
 
-    document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
-    document.querySelector('#mac').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
-    document.querySelector('#version').innerHTML = data.tag_name
+    const url = data.tag_name
+        ? `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-Mac.dmg`
+        : 'https://github.com/quickwords/quickwords/releases'
+    
+    document.querySelector('#os').href = url
+    document.querySelector('#mac').href = url
+    document.querySelector('#version').innerHTML = data.tag_name || ''
 
     // @todo Uncomment
     // document.querySelector('#os').href = `https://github.com/quickwords/quickwords/releases/download/${data.tag_name}/Quickwords-${getPlatform()}.zip`
